@@ -3,15 +3,28 @@
 This guide is for lab members working with the GDSTEM-preprocessing repository.
 It walks you through how to set up Git, clone the repository, contribute code, and stay in sync when collaborating.
 
+# GitHub Tutorial for GDSTEM Preprocessing Code
+
+This guide is for lab members working with the test-repo repository.
+It walks you through how to set up Git, clone the repository, contribute code, and stay in sync when collaborating.
+
 ---
 
-## 1. Create the Repository on GitHub
+## 1. Create a GitHub Account and Join the UCDglobalchange Organization
+
+1. Go to [https://github.com](https://github.com) and create a GitHub account if you don’t already have one.
+2. Send your GitHub username to the lab manager or PI to receive an invitation to the **UCDglobalchange** organization.
+3. Accept the invitation via email or by logging into GitHub and checking [https://github.com/notifications](https://github.com/notifications).
+
+---
+
+## 2. Create the Repository on GitHub
 
 1. Go to [https://github.com](https://github.com) and log in.
 2. Click the **"+"** icon in the upper right, then select **"New repository"**.
 3. Fill in the details:
 
-   * **Repository name**: `GDSTEM-preprocessing`
+   * **Repository name**: `test-repo`
    * **Optional**: Add a short description
    * Choose **Private** or **Public** depending on access needs
    * ✅ Check **"Add a README file"**
@@ -19,7 +32,7 @@ It walks you through how to set up Git, clone the repository, contribute code, a
 
 ---
 
-## 2. Set Up Git on Your Local Machine or FARM (if not already installed)
+## 3. Set Up Git on Your Local Machine or FARM (if not already installed)
 
 ### Install Git:
 
@@ -37,16 +50,56 @@ git config --global user.email "your_email@example.com"
 
 ---
 
-## 3. Clone the GitHub Repository to Your Local Machine
+## 4. Set Up SSH Access to GitHub (One-Time Setup)
+
+### Check if you already have an SSH key:
 
 ```bash
-git clone git@github.com:UCDglobalchange/GDSTEM-preprocessing.git
-cd GDSTEM-preprocessing
+ls ~/.ssh
+```
+
+Look for files named `id_ed25519` or `id_rsa`. If you don't see them:
+
+### Generate a new SSH key:
+
+```bash
+ssh-keygen -t ed25519 -C "your_email@example.com"
+```
+
+Press Enter to accept the default file location. You can optionally set a passphrase.
+
+### Add the SSH key to GitHub:
+
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+
+1. Copy the output.
+2. Go to [https://github.com/settings/keys](https://github.com/settings/keys)
+3. Click **"New SSH key"**, give it a name (e.g., "FARM"), and paste the key.
+
+### Test your SSH connection:
+
+```bash
+ssh -T git@github.com
+```
+
+If successful, you’ll see:
+
+> Hi your\_username! You've successfully authenticated, but GitHub does not provide shell access.
+
+---
+
+## 5. Clone the GitHub Repository to Your Local Machine
+
+```bash
+git clone git@github.com:UCDglobalchange/test-repo.git
+cd test-repo
 ```
 
 ---
 
-## 4. Add Your Existing Code
+## 6. Add Your Existing Code
 
 If your scripts are in another folder, copy them into the repository:
 
@@ -58,12 +111,12 @@ If you're starting in a non-Git folder and want to connect it to GitHub:
 
 ```bash
 git init
-git remote add origin git@github.com:UCDglobalchange/GDSTEM-preprocessing.git
+git remote add origin git@github.com:UCDglobalchange/test-repo.git
 ```
 
 ---
 
-## 5. Commit and Push Your Code
+## 7. Commit and Push Your Code
 
 ```bash
 git add .
@@ -73,7 +126,7 @@ git push origin main
 
 ---
 
-## 6. Keeping Your Local Copy Up to Date (Pull Changes)
+## 8. Keeping Your Local C
 
 If other people are working on the repo (or you're working from multiple machines), always **pull new changes before working**:
 
@@ -85,7 +138,7 @@ git pull origin main --rebase
 
 ---
 
-## 7. Daily Git Workflow Summary
+## 8. Daily Git Workflow Summary
 
 ```bash
 # Step 1: Get the latest version
@@ -105,12 +158,12 @@ git push origin main
 
 ---
 
-## 8. Handling Push Errors
+## 9. Handling Push Errors
 
 If you see this error:
 
 ```bash
-error: failed to push some refs to 'github.com:UCDglobalchange/GDSTEM-preprocessing.git'
+error: failed to push some refs to 'github.com:UCDglobalchange/test-repo.git'
 hint: Updates were rejected because the remote contains work that you do
 hint: not have locally. This is usually caused by another repository pushing
 ```
@@ -132,7 +185,7 @@ Git will tell you which files need attention.
 
 ---
 
-## 9. Optional: Add a .gitignore and LICENSE
+## 10. Optional: Add a .gitignore and LICENSE
 
 Add a `.gitignore` file for Python projects:
 
@@ -153,5 +206,8 @@ git push origin main
 ```
 
 ---
+
+Let me know if you'd like help with GitHub issues, managing branches, or resolving merge conflicts!
+
 
 Let me know if you'd like help with GitHub issues, managing branches, or resolving merge conflicts!
