@@ -121,7 +121,7 @@ git push origin main
 
 ---
 
-## 8. Keeping Your Local C
+## 8. Keeping Your Local Copy Up to Date (Pull Changes)
 
 If other people are working on the repo (or you're working from multiple machines), always **pull new changes before working**:
 
@@ -133,7 +133,7 @@ git pull origin main --rebase
 
 ---
 
-## 8. Daily Git Workflow Summary
+## 9. Daily Git Workflow Summary
 
 ```bash
 # Step 1: Get the latest version
@@ -153,7 +153,7 @@ git push origin main
 
 ---
 
-## 9. Handling Push Errors
+## 10. Handling Push Errors
 
 If you see this error:
 
@@ -180,7 +180,24 @@ Git will tell you which files need attention.
 
 ---
 
-## 10. Optional: Add a .gitignore and LICENSE
+## 11. Repository Structure
+
+It is helpful to maintain a consistent directory structure across projects. A suggested format is:
+
+```
+test-repo/
+├── data/          # Input data files (do not commit large files)
+├── scripts/       # Python or shell scripts used in processing
+├── results/       # Output files, usually excluded from Git
+├── docs/          # Documentation or notes
+├── README.md      # Project description and instructions
+├── .gitignore     # Files or folders to exclude from Git
+└── LICENSE        # Licensing information
+```
+
+Feel free to adjust this structure to fit the needs of your specific project. Just be consistent and clear in how files are organized.
+
+## 12. Optional: Add a .gitignore and LICENSE
 
 Add a `.gitignore` file for Python projects:
 
@@ -190,6 +207,16 @@ git add .gitignore
 git commit -m "Add .gitignore"
 git push origin main
 ```
+You should use .gitignore to exclude files that don't need to be tracked, such as large data files, compiled code, temporary logs, or machine-specific settings."
+
+You could also add:
+
+# Example .gitignore entries
+*.nc
+*.log
+__pycache__/
+temp/
+
 
 Add a license (MIT recommended for academic code):
 
@@ -202,7 +229,3 @@ git push origin main
 
 ---
 
-Let me know if you'd like help with GitHub issues, managing branches, or resolving merge conflicts!
-
-
-Let me know if you'd like help with GitHub issues, managing branches, or resolving merge conflicts!
