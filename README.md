@@ -1,7 +1,7 @@
 # GitHub Tutorial
 
 This guide is for members of the Global Environmental Change Lab at UC Davis working on developing and using code, primarly on the FARM Linux-based supercomputing cluster managed by the College of Agricultural and Environmental Sciences at UC Davis, but it is also useful if working with code on your desktop/laptop.
-It walks you through how to set up Git, clone the repository, contribute code, and stay in sync when collaborating.
+It walks you through how to set up a GitHub account, set up Git, create a new repository, contribute code, and stay in sync when collaborating
 
 ---
 
