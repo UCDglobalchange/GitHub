@@ -197,7 +197,73 @@ test-repo/
 
 Feel free to adjust this structure to fit the needs of your specific project. Just be consistent and clear in how files are organized.
 
-## 12. Optional: Add a .gitignore and LICENSE
+## 12. Managing Branches and Resolving Merge Conflicts
+
+### Working with Branches
+
+Using branches is helpful when making experimental changes or working on features separately from the main codebase.
+
+```bash
+# Create and switch to a new branch
+git checkout -b my-feature-branch
+
+# Do your work and commit as usual
+git add .
+git commit -m "Work on my new feature"
+
+# Push the branch to GitHub
+git push origin my-feature-branch
+```
+
+Once your changes are reviewed or complete, you can merge them into the `main` branch:
+
+```bash
+# Switch to main branch
+git checkout main
+
+# Pull the latest changes
+git pull origin main
+
+# Merge your feature branch
+git merge my-feature-branch
+
+# Push the updated main branch
+git push origin main
+```
+
+### Resolving Merge Conflicts
+
+If the same lines in the same file were changed in both branches (or on GitHub vs your local copy), Git will pause the merge and mark the conflict:
+
+```bash
+git pull origin main --rebase
+```
+
+You will see conflict markers like this in the file:
+
+```
+<<<<<<< HEAD
+Your local changes
+=======
+Changes from GitHub
+>>>>>>> origin/main
+```
+
+Edit the file to keep what you want, then mark the conflict as resolved:
+
+```bash
+git add conflicted_file.py
+
+# If you were rebasing:
+git rebase --continue
+
+# Or if you were merging:
+git commit -m "Resolve merge conflict"
+```
+
+---
+
+## 13. Optional: Add a .gitignore
 
 Add a `.gitignore` file for Python projects:
 
@@ -207,14 +273,19 @@ git add .gitignore
 git commit -m "Add .gitignore"
 git push origin main
 ```
-You should use .gitignore to exclude files that don't need to be tracked, such as large data files, compiled code, temporary logs, or machine-specific settings.
 
-# Example .gitignore entries
+You should use `.gitignore` to exclude files that don't need to be tracked, such as large data files, compiled code, temporary logs, or machine-specific settings.
+
+**Example .gitignore entries**:
+
+````
 *.nc
 *.log
 __pycache__/
 temp/
+````
 
+## 14. Add a License
 
 Add a license (MIT recommended for academic code):
 
@@ -224,6 +295,3 @@ git add LICENSE
 git commit -m "Add license"
 git push origin main
 ```
-
----
-
