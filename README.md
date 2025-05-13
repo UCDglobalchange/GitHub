@@ -207,9 +207,7 @@ git add .gitignore
 git commit -m "Add .gitignore"
 git push origin main
 ```
-You should use .gitignore to exclude files that don't need to be tracked, such as large data files, compiled code, temporary logs, or machine-specific settings."
-
-You could also add:
+You should use .gitignore to exclude files that don't need to be tracked, such as large data files, compiled code, temporary logs, or machine-specific settings.
 
 # Example .gitignore entries
 *.nc
