@@ -27,7 +27,7 @@ It walks you through how to set up Git, clone the repository, contribute code, a
 
 ---
 
-## 3. Set Up Git on Your Local Machine or FARM (if not already installed)
+## 3. Set Up Git on Your Local Machine (it is already installed on FARM)
 
 ### Install Git:
 
@@ -45,7 +45,7 @@ git config --global user.email "your_email@example.com"
 
 ---
 
-## 4. Set Up SSH Access to GitHub (One-Time Setup)
+## 4. Set Up SSH Access to GitHub on FARM (One-Time Setup)
 
 ### Check if you already have an SSH key:
 
@@ -85,7 +85,7 @@ If successful, you’ll see:
 
 ---
 
-## 5. Clone the GitHub Repository to Your Local Machine
+## 5. Clone the GitHub Repository to FARM (or to Your Local Machine)
 
 ```bash
 git clone git@github.com:UCDglobalchange/test-repo.git
@@ -121,7 +121,7 @@ git push origin main
 
 ---
 
-## 8. Keeping Your Local Copy Up to Date (Pull Changes)
+## 8. Keeping Your FARM Copy (or Local Copy) Up to Date (Pull Changes)
 
 If other people are working on the repo (or you're working from multiple machines), always **pull new changes before working**:
 
