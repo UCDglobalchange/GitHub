@@ -1,11 +1,6 @@
-# GitHub Tutorial members of the Global Environmental Change Lab at UC Davis
+# GitHub Tutorial
 
-This guide is for lab members working with the GDSTEM-preprocessing repository.
-It walks you through how to set up Git, clone the repository, contribute code, and stay in sync when collaborating.
-
-# GitHub Tutorial for GDSTEM Preprocessing Code
-
-This guide is for lab members working with the test-repo repository.
+This guide is for members of the Global Environmental Change Lab at UC Davis working on developing and using code, primarly on the FARM Linux-based supercomputing cluster managed by the College of Agricultural and Environmental Sciences at UC Davis, but it is also useful if working with code on your desktop/laptop.
 It walks you through how to set up Git, clone the repository, contribute code, and stay in sync when collaborating.
 
 ---
