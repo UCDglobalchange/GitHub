@@ -173,6 +173,7 @@ git fetch origin
 
 # Step 4: Reset your local main branch to match the remote
 git reset --hard origin/main
+```
 
 ---
 
