@@ -153,7 +153,30 @@ git push origin main
 
 ---
 
-## 10. Handling Push Errors
+## 10. Resetting Local Repository to Match Remote
+
+If you want to discard all your local changes and make your local repository exactly match the remote `main` branch, follow these steps. This is useful when things get messy or out of sync, and you just want to start fresh without recloning the repo.
+
+⚠️ **Warning**: This will permanently delete local changes that haven't been committed or pushed.
+
+### Step-by-step instructions:
+
+```bash
+# Step 1: Discard any local changes
+git reset --hard
+
+# Step 2: Remove any untracked files or directories (e.g., temp files)
+git clean -fd
+
+# Step 3: Fetch the latest from the remote repository
+git fetch origin
+
+# Step 4: Reset your local main branch to match the remote
+git reset --hard origin/main
+
+---
+
+## 11. Handling Push Errors
 
 If you see this error:
 
@@ -180,7 +203,7 @@ Git will tell you which files need attention.
 
 ---
 
-## 11. Repository Structure
+## 12. Repository Structure
 
 It is helpful to maintain a consistent directory structure across projects. A suggested format is:
 
@@ -197,7 +220,7 @@ test-repo/
 
 Feel free to adjust this structure to fit the needs of your specific project. Just be consistent and clear in how files are organized.
 
-## 12. Managing Branches and Resolving Merge Conflicts
+## 13. Managing Branches and Resolving Merge Conflicts
 
 ### Working with Branches
 
@@ -263,7 +286,7 @@ git commit -m "Resolve merge conflict"
 
 ---
 
-## 13. Optional: Add a .gitignore
+## 14. Optional: Add a .gitignore
 
 Add a `.gitignore` file for Python projects:
 
@@ -285,7 +308,7 @@ __pycache__/
 temp/
 ````
 
-## 14. Add a License
+## 15. Add a License
 
 Add a license (MIT recommended for academic code):
 
